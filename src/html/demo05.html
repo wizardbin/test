@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+      ul{
+          list-style: none;
+          position: relative;
+          left:82px;
+      }
+    </style>
+    <script type="text/javascript" src="../js/jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $(function (){
+
+            $(".btn").click(function (){
+                var li = $("<li></li>");
+                li.html($(".txt").val() + "     <a href='#'> 删除 </a>");
+                $("ul").prepend(li);
+                li.show();
+                $(".txt").val("");
+            })
+
+            $("ul").on("click","a",function (){
+                $(this).parent().remove();
+            })
+        })
+    </script>
+</head>
+<body>
+
+    <div class = "box">
+        <span>发表留言</span>
+        <textarea class = "txt" cols = "80px" rows = "10px"></textarea>
+        <button class = "btn">发布</button>
+        <br/>
+        <ul></ul>
+    </div>
+
+</body>
+</html>

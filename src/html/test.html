@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+        var f = 1;
+        $(function (){
+
+            $("#dd").click(function (){
+                if(f == 1 ){
+
+                    console.log(1+"="+f);
+                    f = 0 ;
+                }
+                else {
+
+                    console.log(2+"="+f);
+                    f = 1;
+                }
+            })
+        })
+
+    </script>
+</head>
+<body>
+
+    <button id="dd">点我</button>
+
+</body>
+</html>

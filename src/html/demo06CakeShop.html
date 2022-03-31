@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/demo06CakeShop.css">
+    <script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        var flag = 0;
+        $(function (){
+
+            $(".search").click(function (){
+                var $div = $(".divSearch");
+                $div.toggle();
+            })
+
+
+
+            $("#dropdownId").click(function (){
+                var $li = $(this)
+                var li = $li[0];
+                li.style.backgroundColor = "orange";
+
+            })
+
+            $(document).bind("click", function(e) {
+                var target = $(e.target);
+                if (target.closest("#dropdownId").length == 0) { //点击dropdownId之外的地方触发事件
+                    //要实现的代码
+                    var $li = $("#dropdownId");
+                    var li = $li[0];
+                    li.style.backgroundColor = "transparent";
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+<!--...header...-->
+<div class="header">
+    <div class="container" style="width: 1250px">
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1" style="background: #985f0d">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#" style="color: white">首页</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" id="dropdownId" data-toggle="dropdown" style="color: white">
+                            商品分类
+                            <b class="caret"></b>
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" id="menu">
+                            <li><a href="#">水果</a></li>
+                            <li><a href="#">医药</a></li>
+                            <li><a href="#">手机</a></li>
+                            <li><a href="#">美妆</a></li>
+                            <li><a href="#">电器</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#" style="color: white">热销</a> </li>
+                    <li><a href="#" style="color: white">新品</a> </li>
+                    <li style="background: orange"><a href="#" class="active" style="color: white">注册</a> </li>
+                    <li><a href="#" style="color: white">登录</a> </li>
+
+                    <li style="border:0px solid red;position: absolute;right: 80px">
+                        <a href="#" class="search">
+                            <span style="color: white" class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                    <li style="border:0px solid red;position: absolute;right: 40px">
+                        <a href="#">
+                                <span style="color: white;" class="glyphicon glyphicon-shopping-cart" aria-hidden="true">
+                                <!--......-->
+                                    <span class="card_num"></span>
+                                </span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+
+        <div class="clearfix"> </div>
+    </div>
+
+</div>
+
+<div class="sousuo">
+    <div class="divSearch">
+        <form action="#" method="post">
+            <input type="text" name="searchText" id="searchText">
+            <button type="submit" class="btn btn-primary input-sm" id="searchbtn">搜索</button>
+        </form>
+    </div>
+</div>
+
+<!-- user -->
+<div class="account">
+    <div class="container">
+        <!--......-->
+
+        <div class="register">
+            <h3 style="color: orange;text-align: center">注册新用户</h3>
+            <form action="#" method="post">
+                <div class="form-group" style="height: 40px">
+                    <label for="exampleUsername1" class="register_label">用户名<label style="color: red;">*</label></label>
+                    <input type="text"  class="form-control input-sm register_input" id="exampleUsername1" placeholder="请输入用户名">
+                </div>
+                <div class="form-group" style="height: 40px">
+                    <label for="exampleInputEmail1" class="register_label">邮箱<label style="color: red;">*</label></label>
+                    <input type="email"  class="form-control input-sm register_input" id="exampleInputEmail1" placeholder="请输入邮箱">
+                </div>
+                <div class="form-group" style="height: 40px">
+                    <label for="exampleInputPassword1" class="register_label">密码<label style="color: red;">*</label></label>
+                    <input type="password" class="form-control input-sm register_input" id="exampleInputPassword1" placeholder="请输入密码">
+                </div>
+                <div class="form-group" style="height: 40px">
+                    <label for="shouHuo" class="register_label">收货人<label style="color: red;">*</label></label>
+                    <input type="text" class="form-control input-sm register_input" id="shouHuo" placeholder="请输入收货人">
+                </div>
+                <div class="form-group" style="height: 40px">
+                    <label for="shouHuoPhone" class="register_label">收货电话<label style="color: red;">*</label></label>
+                    <input type="text" class="form-control input-sm register_input" id="shouHuoPhone" placeholder="请输入收货电话">
+                </div>
+                <div class="form-group" style="height: 40px">
+                    <label for="shouHuoAddress" class="register_label">收货地址<label style="color: red;">*</label></label>
+                    <input type="text" class="form-control input-sm register_input" id="shouHuoAddress" placeholder="请输入收货地址">
+                </div>
+                <div style="text-align: center;margin-top: 30px">
+                    <button type="submit" class="btn btn-warning input-sm" style="background: orange;color: white">提交</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="container">
+        <p style="text-align: center">信息技术与工程学院 @ 计科04罗晓彬  </p>
+    </div>
+</div>
+
+
+</body>
+</html>

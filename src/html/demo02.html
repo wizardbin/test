@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../css/demo02.css">
+  <title>Title</title>
+</head>
+<body>
+<div class="div1">
+  <div class="text">
+    用户注册
+  </div>
+  <form action="#" method="post">
+    <table>
+      <tr>
+        <td class="td1">用户名：</td>
+        <td><input type="text" name = "username" value="" class="input1"/></td>
+      </tr>
+      <tr>
+        <td class="td1">密码：</td>
+        <td><input type="password" name = "pwd" class="input1"/></td>
+      </tr>
+      <tr>
+        <td class="td1">性别：</td>
+        <td><input type="radio" name = "gender" value="man" id="man"/><label for="man">男</label>
+          <input type="radio" name = "gender" value="woman"id="woman"/><label for="woman">女</label>
+        </td>
+      </tr>
+      <tr>
+        <td class="td1">爱好：</td>
+        <td>
+          <input type="checkbox" name="hobby" value="study" id="study"/><label for="study">学习</label>
+          <input type="checkbox" name="hobby" value="basketball" id="basketball"/><label for="basketball">篮球</label>
+          <input type="checkbox" name="hobby" value="sing" id="sing"/><label for="sing">唱歌</label>
+          <input type="checkbox" name="hobby" value="dance" id="dance"/><label for="dance">跳舞</label>
+        </td>
+      </tr>
+      <tr>
+        <td class="td1">肖像：</td>
+        <td>
+          <input type="file" name="photo"/>
+        </td>
+      </tr>
+      <tr>
+        <td class="td1">学院：</td>
+        <td>
+          <select name="xueYuan">
+            <option selected>请选择--</option>
+            <option value="xinxi">信息技术工程学院</option>
+            <option value="guanli">管理学院</option>
+            <option value="waiguo">外国语学院</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td align="center" colspan="2">
+          <input type="submit" value="提交"/>
+          <input type="reset" value="取消"/>
+        </td>
+      </tr>
+
+    </table>
+  </form>
+</div>
+
+</body>
+</html>
